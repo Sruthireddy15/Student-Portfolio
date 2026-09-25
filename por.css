@@ -1,3 +1,5 @@
+/* Basic page */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,12 +7,18 @@ body {
     color: #333;
 }
 
+
+/* Header */
+
 header {
     background-color: #222;
     color: white;
     padding: 20px;
     text-align: center;
 }
+
+
+/* Navigation */
 
 nav {
     margin-top: 15px;
@@ -26,10 +34,16 @@ nav a:hover {
     text-decoration: underline;
 }
 
+
+/* Main content */
+
 main {
     width: 80%;
     margin: 20px auto;
 }
+
+
+/* Sections */
 
 section {
     background-color: white;
@@ -37,6 +51,9 @@ section {
     margin-bottom: 20px;
     border-radius: 8px;
 }
+
+
+/* Headings */
 
 h2 {
     color: #333;
@@ -60,12 +77,31 @@ section p {
     line-height: 1.6;
 }
 
+
+/* Profile photo */
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Hobbies table */
+
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: left;
 }
@@ -75,7 +111,59 @@ th {
     color: white;
 }
 
-input, textarea {
+
+/* Skills Grid */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+
+/* Skill cards */
+
+.skill {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #ccc;
+}
+
+
+/* Projects Grid */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* Project cards */
+
+.project {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 15px #ccc;
+}
+
+
+/* Form */
+
+input,
+textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -86,12 +174,8 @@ textarea {
     height: 100px;
 }
 
-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
+
+/* Button */
 
 button {
     padding: 10px 20px;
@@ -106,9 +190,52 @@ button:hover {
     background-color: #555;
 }
 
+
+/* Footer */
+
 footer {
     background-color: #222;
     color: white;
     text-align: center;
     padding: 15px;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
 }
